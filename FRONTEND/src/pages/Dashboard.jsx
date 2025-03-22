@@ -1,0 +1,13 @@
+// src/pages/Dashboard.jsx
+import React from "react";
+
+const Dashboard = () => {
+  return (
+    <div style={{ padding: "20px" }}>
+      <h1>Bem-vindo à Dashboard</h1>
+      {/* Conteúdo específico da Dashboard */}
+    </div>
+  );
+};
+
+export default Dashboard;

@@ -75,4 +75,15 @@ router.delete('/excluir/:id', autenticarToken, async (req, res) => {
   }
 });
 
+router.get('/buscar/:id', autenticarToken, async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const usuario = await ServicoUsuario.buscarUsuarioPorId(id);
+    res.status(200).json(usuario);
+  } catch (erro) {
+    res.status(400).json({ mensagem: erro.message });
+  }
+});
+
 export default router;

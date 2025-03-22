@@ -99,6 +99,18 @@ const ServicoUsuario = {
       throw erro;
     }
   },
+
+  buscarUsuarioPorId: async (id) => {
+    try {
+      const usuario = await Usuario.findById(id);
+      if (!usuario) {
+        throw new Error("Usuário não encontrado!");
+      }
+      return usuario;
+    } catch (erro) {
+      throw erro;
+    }
+  }
 };
 
 export default ServicoUsuario;
